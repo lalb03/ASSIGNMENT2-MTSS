@@ -19,3 +19,7 @@ jobs:
               env:
                   COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
               run: mvn -B coveralls:report
+            - name: Use Node.js 20.x
+              uses: action/setup-node@v3
+              with:
+                  node-version: 20.x
